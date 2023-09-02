@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body {
+    overflow-x: hidden;
+}
+
+section{
+    padding:1rem 2%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2%;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    /* box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.1); */
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+.logo img {
+    width: 150px;
+}
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: #000;
+    font-weight: 700;
+}
+
+.banner img{
+    width: 100%;
+}
+.product-header {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+.product-header img {
+    width: 30px;
+}
+.product-header p{
+    color: #003059;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+}
+.product-container p.desc {
+    color: #496781;
+    padding: 2rem 0px;
+    font-size: 1.5rem;
+}
+
+.product .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+.product .box-container .box {
+    /* padding: 3rem 0rem; */
+    background: #fff;
+    outline-offset: -1rem;
+    text-align: center;
+}
+.box img {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.box h3 {
+    color: #8b283c;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.box p{
+    color: #496781;
+    font-size: 1.5rem;
+}
+
+.lorem-head p.desc{
+    color: #496781;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+}
+.feature-box {
+    flex-basis: 70%;
+}
+.feature-box h3 {
+    font-size: 2rem;
+}
+
+.feature-box h3 {
+    font-size: 2rem;
+    color: #8b283c;
+    padding: 0 0 1rem;
+}
+
+.feature-box p {
+    color: #496781;
+    padding: 0rem 0px 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-img {
+    flex-basis: 30%; 
+}
+.feature-img img {
+    width: 100%;
+}
+ul.list-container {
+    padding-left: 3rem;
+}
+ul.list-container li {
+    font-size: 1.5rem;
+    color: #496781;
+    padding-bottom: 0.8rem;
+}
+.feature-container.jar {
+    padding-top: 3rem;
+    border-bottom: 4px solid #8b283c;
+}
+.feature-box.right {
+    padding-left: 3rem;
+}
+.feature-container.jar .feature-img img {
+    height: 90%;
+    width: 90%;
+    padding-top: 2rem;
+}
+.brand {
+    text-align: center;
+    color: #496781;
+    padding: 2rem 0;
+}
+.brand p span {
+    font-size: 1.2rem;
+}
+.link-list li {
+    list-style: none;
+    font-size: 1rem;
+    margin: 0 1rem;
+    
+}
+.link-list li>a {
+    color: #496781;
+    font-weight: 700;
+}
+ul.link-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#menu-btn {
+    display: none;
+}
+
+.feature-img.mobile{
+    display: none;
+}
+.feature-img.desktop {
+    display: block;
+}
+/* media queries  */
+
+@media (max-width:991px){
+    .banner img {
+        width: 100%;
+        height: 30vh;
+    }
+    section.banner {
+        padding-top: 7rem;
+        padding-bottom: 0rem;   
+        background-size: cover;
+    }
+    .feature-container {
+        flex-direction: column;
+    }
+    .feature-container.jar .feature-img img {
+        width: 100%;
+        height: 100%;
+    }
+    .link-list li {
+        margin: 0 0.4rem;
+    }
+  
+    div#menu-btn {
+        font-size: 2rem;
+        display: block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 105%;
+        right: -110%;
+        width: 31rem;
+        border-radius: 0.5rem;
+        background: #fff;
+        transition: .4s linear;
+        transition: .4s linear;
+        box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    }
+    .header .navbar.active {
+        right: 1rem;
+        transition: .4s linear;
+    }
+    .navbar ul {
+        display: block;
+    }
+    .header .navbar li a {
+        font-size: 1.5rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+    .feature-box.right {
+        padding-left: 0rem;
+    }
+    ul.list-container {
+        padding-bottom: 3rem;
+    }
+    .feature-img.mobile{
+        display: block;
+    }
+    .feature-img.desktop {
+        display: none;
+    }
+    .feature-box h3{
+        padding: 1rem 0px;
+    }
+    .feature-container.jar .feature-img img {
+        padding-top: 0rem;
+    }
+    .box p {
+        font-size: 1.4rem;
+    }
+    .feature-container.jar {
+        padding-top: 0rem;
+    }
+   
+}
